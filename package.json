@@ -1,0 +1,42 @@
+{
+  "name": "verkefni9",
+  "version": "1.0.0",
+  "description": "## Lýsing",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "date-fns": "^2.16.1",
+    "leaflet": "^1.7.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "rollup": "^2.33.1",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "scripts": {
+    "browser-sync": "browser-sync start --server --files index.html styles.css scripts.js", 
+    "test": "eslint *.js **/*.js",
+    "build": "rollup -c",
+    "rollup-watch": "rollup -c -w",
+    "babel": "babel src --out-dir dist",
+    "babel-watch": "babel src --out-dir dist --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gunnar-Ingi/Verkefni9.git"
+  },
+  "author": "gunnar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gunnar-Ingi/Verkefni9/issues"
+  },
+  "homepage": "https://github.com/Gunnar-Ingi/Verkefni9#readme"
+}

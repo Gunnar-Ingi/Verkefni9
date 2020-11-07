@@ -12,9 +12,25 @@
 //const URL = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson';
 const URL = './4.5_week.geojson';
 
+function createNode(element) {
+  return document.createElement(element);
+}
+
+function append(parent, el) {
+  return parent.appendChild(el);
+}
+
+const earthquakeResult = el(
+  'dl', el('dt', 'Tími'),
+  el('dd', time),
+  el('dt', 'Styrkur'),
+  el('dd', power)
+
+);
+
 export async function fetchEarthquakes() {
 
-  fetch(URL)
+  fetch(`${URL}`)
   .then(function() {
 
   })

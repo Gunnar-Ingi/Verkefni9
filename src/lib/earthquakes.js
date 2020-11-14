@@ -1,3 +1,5 @@
+import defaultExport from 'utils.js';
+
 /**
  * Sækja gögn frá
  * https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
@@ -20,18 +22,23 @@ function append(parent, el) {
   return parent.appendChild(el);
 }
 
-const earthquakeResult = el(
-  'dl', el('dt', 'Tími'),
-  el('dd', time),
-  el('dt', 'Styrkur'),
-  el('dd', power)
 
-);
+
+const earthquakeResult = el('li',
+el('div',
+  el('h2', title),
+  el(
+    'dl', el('dt', 'Tími'),
+    el('dd', time),
+    el('dt', 'Styrkur'),
+    el('dd', power)
+
+  ),),);
 
 export async function fetchEarthquakes() {
 
   fetch(`${URL}`)
-  .then(function() {
+  .then(createNode(earthquakeResult) {
 
   })
   .catch(function() {
